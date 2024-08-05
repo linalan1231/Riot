@@ -1,63 +1,58 @@
 # !pip3 install riotwatcher
-from riotwatcher import LolWatcher, ApiError
 import requests
+import pandas as pd
 
-api_key  = "RGAPI-c3a7bab0-2e16-4ff7-92d1-58d667da76fb" #key expires every 24 hours, please renew at https://developer.riotgames.com
+# Setting up Api key and URL to establish connection
+api_key  = "RGAPI-c3a7bab0-2e16-4ff7-92d1-58d667da76fb" # Key expires every 24 hours, please renew at https://developer.riotgames.com
 tag = "NA2"
 league_name ="Better team wins"
 url = f"https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{league_name}/{tag}"
 
-#checking the response
+# Checking the response -> 400 bad, 401 authorized, 403 forbidden, 404 data not found, 405 method not found.
 api_url = url + '?api_key=' + api_key
-response = requests.get(api_url)  
+response = requests.get(api_url)
 print(response)
 
-#printing player information
+# Printing player information and puuid
 player_info = response.json()
 print(player_info)
-
-#getting the puuid
 puuid = player_info["puuid"]
 
-headers = {"X-Riot-Token":api_key}
+def get_match_history(numb_of_matches):
+    headers = {"X-Riot-Token":api_key}  
 
-total_match_ids = []
-def get_match_id(numb_of_matches):
-    # set numb_of_matches = match number
-    numb_of_matches = numb_of_matches
     match_id_url = f'https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count={numb_of_matches}'
-    match_ids = requests.get(match_id_url, headers=headers)
-    match_id = match_ids.json() 
-    total_match_ids.append(match_id)
-    return total_match_ids
-get_match_id(20)
+    response = requests.get(match_id_url, headers=headers)
+    match_ids = response.json() 
 
-def get_match_info(total_match_ids):
-    match_ids  = match_id[0]
-    match_ids
-    match_info_url = f"https://americas.api.riotgames.com/lol/match/v5/matches/{match_ids}"
-    match_info = requests.get(match_info_url, headers=headers)
-    game_info = match_info.json()
+    latest_match_history = []
+    for i in match_ids:
+        match_info_url = f"https://americas.api.riotgames.com/lol/match/v5/matches/{i}"
+        match_info = requests.get(match_info_url, headers=headers)
+        game_info = match_info.json()
+        latest_match_history.append(game_info)
 
+    return latest_match_history
 
-#creating a function that will collect the kills, deaths, assists, and kda of a player
-def get_player_info(player_name):
+# Creating a function that will collect the kills, deaths, assists, and kda of a player
+def get_player_info(game_info, player_name):
     player_true = []
-    for i in range(10):
-        player_info = game_info["info"]["participants"][i]["riotIdGameName"] == player_name
-        if player_info:
-            player_true.append(game_info["info"]["participants"][i]["riotIdGameName"])
-            player_true.append(game_info["info"]["participants"][i]["kills"])
-            player_true.append(game_info["info"]["participants"][i]["deaths"])
-            player_true.append(game_info["info"]["participants"][i]["assists"])
-            player_true.append(game_info["info"]["participants"][6]["challenges"]["kda"])
+    for game in game_info:
+            participants = game.get("info", {}).get("participants", [])
+            for i in range(len(participants)): 
+                if participants[i].get("riotIdGameName") == player_name:
+                    player_true.append(participants[i].get("riotIdGameName"))
+                    player_true.append(participants[i].get("kills"))
+                    player_true.append(participants[i].get("deaths"))
+                    player_true.append(participants[i].get("assists"))
+                    player_true.append(participants[i].get("challenges", {}).get("kda"))
+                
     return player_true
 
+# Get match history and player info
+game_history = get_match_history(20)
+print(len(game_history))
 
+player_info = get_player_info(game_history, "Better Team wins")
+print(player_info)
 
-#getting the 1st match ID
-#match_ids  = match_id[0]
-#match_info_url = f"https://americas.api.riotgames.com/lol/match/v5/matches/{match_ids}"
-#match_info = requests.get(match_info_url, headers=headers)
-#game_info = match_info.json()
-#return game_info
