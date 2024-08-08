@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 
 # Setting up Api key and URL to establish connection
-api_key  = "RGAPI-c3a7bab0-2e16-4ff7-92d1-58d667da76fb" # Key expires every 24 hours, please renew at https://developer.riotgames.com
-tag = "NA1"
-league_name ="SuSuN PaNdiE"
+api_key  = "RGAPI-e86f1446-1738-4b0b-8f8f-085f73734d0c" # Key expires every 24 hours, please renew at https://developer.riotgames.com
+tag = "Na2"
+league_name ="Better Team wins"
 url = f"https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{league_name}/{tag}"
 
 # Checking the response -> 400 bad, 401 authorized, 403 forbidden, 404 data not found, 405 method not found.
@@ -18,17 +18,18 @@ print(response)
 player_info = response.json()
 print(player_info)
 puuid = player_info["puuid"]
+puuid #unique identifier of a specific player
 
 def get_match_history(numb_of_matches):
     headers = {"X-Riot-Token":api_key}  
 
-    match_id_url = f'https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count={numb_of_matches}'
+    match_id_url = f'https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count={numb_of_matches}' #getting the matchID
     response = requests.get(match_id_url, headers=headers)
     match_ids = response.json() 
 
     latest_match_history = []
     for i in match_ids:
-        match_info_url = f"https://americas.api.riotgames.com/lol/match/v5/matches/{i}"
+        match_info_url = f"https://americas.api.riotgames.com/lol/match/v5/matches/{i}" #getting match information 
         match_info = requests.get(match_info_url, headers=headers)
         game_info = match_info.json()
         latest_match_history.append(game_info)
@@ -52,12 +53,12 @@ def get_player_info(game_info, player_name):
 
 # Get match history and player info
 game_history = get_match_history(20)
-print(len(game_history))
+print(len(game_history)) #checking the number of games
 
-player_info = get_player_info(game_history, "SuSuN PaNdiE")
+player_info = get_player_info(game_history, "Better Team wins")
 print(player_info)
 
-player_info = np.array(player_info).reshape(-1,5)
+player_info = np.array(player_info).reshape(-1,5) #reshaping the list 5 columns with automatic rows 
 player_info
 df = pd.DataFrame(player_info, columns =["player_name","kills","deaths","assists","KDA"])
 df
