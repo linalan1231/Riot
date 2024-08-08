@@ -48,7 +48,10 @@ def get_player_info(game_info, player_name):
                     player_true.append(participants[i].get("deaths"))
                     player_true.append(participants[i].get("assists"))
                     player_true.append(participants[i].get("challenges", {}).get("kda"))
-                
+                    player_true.append(participants[i].get("goldEarned"))
+                    player_true.append(participants[i].get("goldSpent"))
+                    player_true.append(participants[i].get("totalDamageDealtToChampions"))
+                    player_true.append(participants[i].get("totalDamageTaken"))
     return player_true
 
 # Get match history and player info
@@ -58,7 +61,7 @@ print(len(game_history)) #checking the number of games
 player_info = get_player_info(game_history, "Better Team wins")
 print(player_info)
 
-player_info = np.array(player_info).reshape(-1,5) #reshaping the list 5 columns with automatic rows 
+player_info = np.array(player_info).reshape(-1,9) #reshaping the list 5 columns with automatic rows 
 player_info
-df = pd.DataFrame(player_info, columns =["player_name","kills","deaths","assists","KDA"])
+df = pd.DataFrame(player_info, columns =["player_name","kills","deaths","assists","KDA","gold_Earned","gold_Spend","Total_Damage_dealt","Damage_Taken"])
 df
