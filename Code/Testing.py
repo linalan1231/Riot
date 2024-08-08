@@ -4,7 +4,8 @@ import pandas as pd
 import numpy as np
 
 # Setting up Api key and URL to establish connection
-api_key  = "RGAPI-e86f1446-1738-4b0b-8f8f-085f73734d0c" # Key expires every 24 hours, please renew at https://developer.riotgames.com
+api_file = open("/Users/alanlin/Desktop/API_Key/API_KEY.txt","r") #opening API key on local 
+api_key = api_file.read()
 tag = "Na2"
 league_name ="Better Team wins"
 url = f"https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{league_name}/{tag}"
