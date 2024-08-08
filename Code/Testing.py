@@ -39,7 +39,7 @@ def get_match_history(numb_of_matches):
 
     return latest_match_history
 
-# Creating a function that will collect the kills, deaths, assists, and kda of a player
+# Creating a function that will collect the kills, deaths, assists, kda, and other player stats
 def get_player_info(game_info, player_name):
     player_true = []
     for game in game_info:
@@ -59,17 +59,19 @@ def get_player_info(game_info, player_name):
     return player_true
 
 # Get match history and player info
-game_history = get_match_history(20)
+game_history = get_match_history(100)
 print(len(game_history)) #checking the number of games
 
 player_info = get_player_info(game_history, "Better Team wins")
 print(player_info)
 
-player_info = np.array(player_info).reshape(-1,10) #reshaping the list 5 columns with automatic rows 
+player_info = np.array(player_info).reshape(-1,10) #reshaping the list
 player_stats = pd.DataFrame(player_info, columns =["player_name","kills","deaths","assists","KDA","gold_Earned","gold_Spend","Total_Damage_dealt","Damage_Taken","status"])
 player_stats["status"] = player_stats["status"].replace({"True":"Win", "False":"Lose"}) #Changing True to win and False to Lose
+player_stats.to_csv("player_stats.csv", index = False)
+#Basic Visualization
 
-#Basic Visualization- Bar, Line, etc
+# Bar - Wins vs Lost
 status_counts = dict(player_stats["status"].value_counts())
 status_df = pd.DataFrame(list(status_counts.items()), columns=['status', 'counts'])
 sns.barplot(x='status', y='counts', data = status_df)
@@ -77,3 +79,4 @@ plt.title("Wins Vs Losses")
 plt.xlabel("Status")
 plt.ylabel("Counts")
 plt.show()
+
