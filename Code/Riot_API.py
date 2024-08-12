@@ -61,7 +61,7 @@ def get_player_info(game_info, player_name):
     return player_true
 
 # Get match history and player info
-game_history = get_match_history(100)
+game_history = get_match_history(100) #100 maximum amount
 print(len(game_history)) #checking the number of games
 
 player_info = get_player_info(game_history, "Better Team wins")
