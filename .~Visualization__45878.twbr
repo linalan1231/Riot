@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='player_stats' inline='true' name='federated.0eqoe4i02gjjfb110cy1o0pydjr4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='player_stats' name='textscan.0zst6td09f042f1d57uji0su0ew0'>
+            <connection class='textscan' directory='/Users/alanlin/Desktop/Riot' filename='player_stats.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0zst6td09f042f1d57uji0su0ew0' name='player_stats.csv' table='[player_stats#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='player_name' ordinal='0' />
+            <column datatype='real' name='kills' ordinal='1' />
+            <column datatype='real' name='deaths' ordinal='2' />
+            <column datatype='real' name='assists' ordinal='3' />
+            <column datatype='real' name='KDA' ordinal='4' />
+            <column datatype='real' name='gold_Earned' ordinal='5' />
+            <column datatype='real' name='gold_Spend' ordinal='6' />
+            <column datatype='real' name='Total_Damage_dealt' ordinal='7' />
+            <column datatype='real' name='Damage_Taken' ordinal='8' />
+            <column datatype='string' name='status' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0zst6td09f042f1d57uji0su0ew0' name='player_stats.csv' table='[player_stats#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='player_name' ordinal='0' />
+            <column datatype='real' name='kills' ordinal='1' />
+            <column datatype='real' name='deaths' ordinal='2' />
+            <column datatype='real' name='assists' ordinal='3' />
+            <column datatype='real' name='KDA' ordinal='4' />
+            <column datatype='real' name='gold_Earned' ordinal='5' />
+            <column datatype='real' name='gold_Spend' ordinal='6' />
+            <column datatype='real' name='Total_Damage_dealt' ordinal='7' />
+            <column datatype='real' name='Damage_Taken' ordinal='8' />
+            <column datatype='string' name='status' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kills</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[kills]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>kills</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[deaths]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>deaths</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>assists</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[assists]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>assists</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KDA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[KDA]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>KDA</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gold_Earned</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gold_Earned]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>gold_Earned</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gold_Spend</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gold_Spend]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>gold_Spend</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Damage_dealt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total_Damage_dealt]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>Total_Damage_dealt</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Damage_Taken</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Damage_Taken]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>Damage_Taken</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[player_stats.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[__tableau_internal_object_id__].[cnt:player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE:qk]&quot;' value='Game Count' />
+          <alias key='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:gold_Earned:qk]&quot;' value='Gold Earn' />
+          <alias key='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:gold_Spend:qk]&quot;' value='Gold Spend' />
+          <alias key='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:Total_Damage_dealt:qk]&quot;' value='Damage Dealt' />
+        </aliases>
+      </column>
+      <column caption='Damage Taken' datatype='real' name='[Damage_Taken]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Status (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[status]' default='&quot;Other&quot;' new-bin='true'>
+          <bin default-name='true' value='&quot;Win&quot;'>
+            <value>&quot;Win&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Total Damage dealt' datatype='real' name='[Total_Damage_dealt]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='player_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]' role='measure' type='quantitative' />
+      <column caption='Assists' datatype='real' name='[assists]' role='measure' type='quantitative' />
+      <column caption='Deaths' datatype='real' name='[deaths]' role='measure' type='quantitative' />
+      <column caption='gold Earned' datatype='real' name='[gold_Earned]' role='measure' type='quantitative' />
+      <column caption='gold Spend' datatype='real' name='[gold_Spend]' role='measure' type='quantitative' />
+      <column caption='Kills' datatype='real' name='[kills]' role='measure' type='quantitative' />
+      <column caption='Player Name' datatype='string' name='[player_name]' role='dimension' type='nominal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Total_Damage_dealt]' derivation='Sum' name='[sum:Total_Damage_dealt:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gold_Earned]' derivation='Sum' name='[sum:gold_Earned:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gold_Spend]' derivation='Sum' name='[sum:gold_Spend:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:status:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Win&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Lose&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='player_stats.csv' id='player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE'>
+            <properties context=''>
+              <relation connection='textscan.0zst6td09f042f1d57uji0su0ew0' name='player_stats.csv' table='[player_stats#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='real' name='kills' ordinal='1' />
+                  <column datatype='real' name='deaths' ordinal='2' />
+                  <column datatype='real' name='assists' ordinal='3' />
+                  <column datatype='real' name='KDA' ordinal='4' />
+                  <column datatype='real' name='gold_Earned' ordinal='5' />
+                  <column datatype='real' name='gold_Spend' ordinal='6' />
+                  <column datatype='real' name='Total_Damage_dealt' ordinal='7' />
+                  <column datatype='real' name='Damage_Taken' ordinal='8' />
+                  <column datatype='string' name='status' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Aveage Gold Income base on status '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='player_stats' name='federated.0eqoe4i02gjjfb110cy1o0pydjr4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0eqoe4i02gjjfb110cy1o0pydjr4'>
+            <column-instance column='[gold_Earned]' derivation='Avg' name='[avg:gold_Earned:qk]' pivot='key' type='quantitative' />
+            <column caption='gold Earned' datatype='real' name='[gold_Earned]' role='measure' type='quantitative' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Win&quot;</bucket>
+              <bucket>&quot;Lose&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Earned:qk]</rows>
+        <cols>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{617AEE48-EADE-4D25-8104-322B35CFB40F}' />
+    </worksheet>
+    <worksheet name='Average Damage dealt/Taken'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='player_stats' name='federated.0eqoe4i02gjjfb110cy1o0pydjr4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0eqoe4i02gjjfb110cy1o0pydjr4'>
+            <column caption='Damage Taken' datatype='real' name='[Damage_Taken]' role='measure' type='quantitative' />
+            <column caption='Total Damage dealt' datatype='real' name='[Total_Damage_dealt]' role='measure' type='quantitative' />
+            <column-instance column='[Damage_Taken]' derivation='Avg' name='[avg:Damage_Taken:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Damage_dealt]' derivation='Avg' name='[avg:Total_Damage_dealt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Win&quot;</bucket>
+              <bucket>&quot;Lose&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Total_Damage_dealt:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Damage_Taken:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Total_Damage_dealt:qk] + [federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Damage_Taken:qk])</rows>
+        <cols>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{28EEE7AF-489B-4A35-9C83-0CC244F0D77F}' />
+    </worksheet>
+    <worksheet name='Game Stats - Win/Loss'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='12'>Game Stats - Wins&amp;Loses</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='player_stats' name='federated.0eqoe4i02gjjfb110cy1o0pydjr4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0eqoe4i02gjjfb110cy1o0pydjr4'>
+            <column caption='Damage Taken' datatype='real' name='[Damage_Taken]' role='measure' type='quantitative' />
+            <column datatype='real' name='[KDA]' role='measure' type='quantitative' />
+            <column caption='Total Damage dealt' datatype='real' name='[Total_Damage_dealt]' role='measure' type='quantitative' />
+            <column caption='Assists' datatype='real' name='[assists]' role='measure' type='quantitative' />
+            <column-instance column='[Damage_Taken]' derivation='Avg' name='[avg:Damage_Taken:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[KDA]' derivation='Avg' name='[avg:KDA:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Damage_dealt]' derivation='Avg' name='[avg:Total_Damage_dealt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[assists]' derivation='Avg' name='[avg:assists:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[deaths]' derivation='Avg' name='[avg:deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gold_Earned]' derivation='Avg' name='[avg:gold_Earned:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gold_Spend]' derivation='Avg' name='[avg:gold_Spend:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kills]' derivation='Avg' name='[avg:kills:qk]' pivot='key' type='quantitative' />
+            <column caption='Deaths' datatype='real' name='[deaths]' role='measure' type='quantitative' />
+            <column caption='gold Earned' datatype='real' name='[gold_Earned]' role='measure' type='quantitative' />
+            <column caption='gold Spend' datatype='real' name='[gold_Spend]' role='measure' type='quantitative' />
+            <column caption='Kills' datatype='real' name='[kills]' role='measure' type='quantitative' />
+            <column-instance column='[player_name]' derivation='None' name='[none:player_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Player Name' datatype='string' name='[player_name]' role='dimension' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[KDA]' derivation='Sum' name='[sum:KDA:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:kills:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:deaths:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:assists:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Total_Damage_dealt:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Damage_Taken:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Earned:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Spend:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:KDA:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:kills:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:deaths:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:assists:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Total_Damage_dealt:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Damage_Taken:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Earned:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Spend:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:KDA:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:player_name:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:player_name:nk]' />
+              <groupfilter function='member' level='[none:player_name:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' direction='DESC' measure-to-sort-by='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Spend:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[:Measure Names]</column>
+            <column>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:player_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:player_name:nk]' value='137' />
+            <format attr='height' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[:Measure Names]' value='29' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:kills:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:deaths:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:assists:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Total_Damage_dealt:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:KDA:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Spend:qk]' value='c&quot;$&quot;#,##0.00;-&quot;$&quot;#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:gold_Earned:qk]' value='n#,##0.00;-#,##0.00' />
+            <format attr='text-format' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[avg:Damage_Taken:qk]' value='c&quot;$&quot;#,##0.00;-&quot;$&quot;#,##0.00' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[:Measure Names]' value='148' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[:Measure Names]</rows>
+        <cols>([federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk] / [federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:player_name:nk])</cols>
+      </table>
+      <simple-id uuid='{3350A55E-FBEB-4C8D-8D5E-4FF4D1C151E2}' />
+    </worksheet>
+    <worksheet name='KDA-Win/Loss'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='player_stats' name='federated.0eqoe4i02gjjfb110cy1o0pydjr4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0eqoe4i02gjjfb110cy1o0pydjr4'>
+            <column caption='Assists' datatype='real' name='[assists]' role='measure' type='quantitative' />
+            <column caption='Deaths' datatype='real' name='[deaths]' role='measure' type='quantitative' />
+            <column caption='Kills' datatype='real' name='[kills]' role='measure' type='quantitative' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[assists]' derivation='Sum' name='[sum:assists:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[deaths]' derivation='Sum' name='[sum:deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[kills]' derivation='Sum' name='[sum:kills:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:status:nk]' />
+              <groupfilter function='member' level='[none:status:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Win&quot;</bucket>
+              <bucket>&quot;Lose&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:kills:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:assists:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:deaths:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:kills:qk] + ([federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:deaths:qk] + [federated.0eqoe4i02gjjfb110cy1o0pydjr4].[sum:assists:qk]))</rows>
+        <cols>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{8C825132-9B19-4208-B641-4F7DDB5636A6}' />
+    </worksheet>
+    <worksheet name='Total games'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='12'>Total Games Count by Wins and losses</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='player_stats' name='federated.0eqoe4i02gjjfb110cy1o0pydjr4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0eqoe4i02gjjfb110cy1o0pydjr4'>
+            <_.fcp.ObjectModelTableType.false...column caption='player_stats.csv' datatype='integer' name='[__tableau_internal_object_id__].[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='player_stats.csv' datatype='table' name='[__tableau_internal_object_id__].[player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE]' role='measure' type='quantitative' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:status:nk]' />
+              <groupfilter function='member' level='[none:status:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Win&quot;</bucket>
+              <bucket>&quot;Lose&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[__tableau_internal_object_id__].[cnt:player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE:qk]' scope='rows' value='Number of Games' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[__tableau_internal_object_id__].[cnt:player_stats.csv_73E67A4B19DA4ACEA6D01285601B62CE:qk]</rows>
+        <cols>[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{E91A1B65-0665-49A3-8D70-50B5511A2DC9}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='700' maxwidth='1200' minheight='700' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='100000' id='3' param='horz' type-v2='layout-flow' w='100000' x='0' y='0'>
+          <zone h='100000' id='7' param='vert' type-v2='layout-flow' w='37500' x='0' y='0'>
+            <zone forceUpdate='true' h='5286' id='5' type-v2='text' w='37500' x='0' y='0'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='16'>Game Score board</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='94714' id='8' param='vert' type-v2='layout-flow' w='37500' x='0' y='5286' />
+          </zone>
+          <zone h='100000' id='9' param='vert' type-v2='layout-flow' w='37500' x='37500' y='0' />
+          <zone fixed-size='292' h='100000' id='6' is-fixed='true' name='Game Stats - Win/Loss' w='25000' x='75000' y='0'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4227E80D-C9EA-4DD6-874D-AB6D43520AFF}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='KDA-Win/Loss'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6CDE2483-FE48-4D67-BD93-81593C11C3A2}' />
+    </window>
+    <window class='worksheet' name='Aveage Gold Income base on status '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9081F459-956D-4269-BA44-BCCCB3A0DE65}' />
+    </window>
+    <window class='worksheet' name='Average Damage dealt/Taken'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C37F4FF1-3D24-437E-ABBA-3FBB6AD3FC66}' />
+    </window>
+    <window class='worksheet' name='Game Stats - Win/Loss'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5B4F9CE1-6067-497E-8BD2-08F0C7AC7D5C}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Game Stats - Win/Loss' />
+      </viewpoints>
+      <active id='9' />
+      <simple-id uuid='{B82FB4E6-9A52-4BEA-8BD8-AD00D192028D}' />
+    </window>
+    <window class='worksheet' name='Total games'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0eqoe4i02gjjfb110cy1o0pydjr4].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{543EBA0B-0773-422F-865A-884E2FA5952E}' />
+    </window>
+  </windows>
+</workbook>

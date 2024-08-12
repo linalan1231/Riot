@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 # Setting up Api key and URL to establish connection
 api_file = open("/Users/alanlin/Desktop/API_Key/API_KEY.txt","r") #opening API key on local 
@@ -56,6 +57,7 @@ def get_player_info(game_info, player_name):
                     player_true.append(participants[i].get("totalDamageDealtToChampions"))
                     player_true.append(participants[i].get("totalDamageTaken"))
                     player_true.append(participants[i].get("win"))
+                    player_true.append(game.get("info", {}).get("gameCreation"))
     return player_true
 
 # Get match history and player info
@@ -65,18 +67,19 @@ print(len(game_history)) #checking the number of games
 player_info = get_player_info(game_history, "Better Team wins")
 print(player_info)
 
-player_info = np.array(player_info).reshape(-1,10) #reshaping the list
-player_stats = pd.DataFrame(player_info, columns =["player_name","kills","deaths","assists","KDA","gold_Earned","gold_Spend","Total_Damage_dealt","Damage_Taken","status"])
+player_info = np.array(player_info).reshape(-1,11) #reshaping the list -> 10 columns, and x amount of rows 
+player_stats = pd.DataFrame(player_info, columns =["player_name","kills","deaths","assists","KDA","gold_Earned","gold_Spend","Total_Damage_dealt","Damage_Taken","status","Date"])
 player_stats["status"] = player_stats["status"].replace({"True":"Win", "False":"Lose"}) #Changing True to win and False to Lose
+player_stats["Date"] = player_stats["Date"].apply(lambda x: datetime.fromtimestamp(float(x) / 1000).strftime('%m%d%Y')) # converting gamecreation value to MM/DD/YYYY
 player_stats.to_csv("player_stats.csv", index = False)
-#Basic Visualization
 
+#Basic Visualization to test -> then import into tableau for analysis 
 # Bar - Wins vs Lost
-status_counts = dict(player_stats["status"].value_counts())
+status_counts = dict(player_stats["status"].value_counts()) 
 status_df = pd.DataFrame(list(status_counts.items()), columns=['status', 'counts'])
 sns.barplot(x='status', y='counts', data = status_df)
 plt.title("Wins Vs Losses")
 plt.xlabel("Status")
 plt.ylabel("Counts")
-plt.show()
+plt.show() # -> more loses than wins 
 
